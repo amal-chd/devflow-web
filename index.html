@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevFlow | Freelancer Operating System</title>
+    <meta
+      name="description"
+      content="DevFlow is a mobile operating system for freelancers and small agencies to manage clients, projects, quotes, invoices, files, analytics, and team workflows."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./assets/app-icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="DevFlow home">
+        <img src="./assets/app-icon.png" alt="DevFlow app icon" />
+        <span>DevFlow</span>
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./support.html" class="nav-cta">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">DevFlow for iPhone and Android</p>
+          <h1>Run your freelance business without living in six different apps.</h1>
+          <p class="hero-text">
+            DevFlow brings projects, clients, quotes, invoices, time tracking,
+            files, leads, analytics, and team workflows into one mobile-first
+            operating system built for developers and small studios.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./support.html#beta"
+              >Request Beta Access</a
+            >
+            <a class="button button-secondary" href="./privacy.html"
+              >Read Privacy Policy</a
+            >
+          </div>
+          <ul class="hero-notes" aria-label="Key highlights">
+            <li>Mobile-first workflows for solo developers and agencies</li>
+            <li>Quotes, invoices, files, and lead tracking in one place</li>
+            <li>Built on Firebase authentication, storage, and real-time sync</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-orbit"></div>
+          <div class="phone-stage">
+            <div class="phone-shell">
+              <div class="phone-topline">
+                <span class="signal-dot"></span>
+                <span>Today</span>
+                <span>DevFlow</span>
+              </div>
+              <div class="phone-scene">
+                <div class="scene-heading">
+                  <span>Revenue pulse</span>
+                  <strong>Everything in motion</strong>
+                </div>
+                <div class="scene-bars" aria-hidden="true">
+                  <span style="height: 35%"></span>
+                  <span style="height: 48%"></span>
+                  <span style="height: 62%"></span>
+                  <span style="height: 76%"></span>
+                  <span style="height: 92%"></span>
+                </div>
+                <div class="scene-flow">
+                  <div>
+                    <small>Lead</small>
+                    <strong>Discovery call</strong>
+                  </div>
+                  <div>
+                    <small>Quote</small>
+                    <strong>Sent in 4 min</strong>
+                  </div>
+                  <div>
+                    <small>Invoice</small>
+                    <strong>Paid this week</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-caption">
+              <span>Freelancer OS</span>
+              <p>
+                From first client message to final payment, DevFlow is designed
+                to keep the operational side of client work moving.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="content-section split-section">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Core Surface</p>
+          <h2>One app for the work around the work.</h2>
+          <p>
+            The product language in this repo is consistent: DevFlow is not a
+            generic note app. It is a structured workspace for freelance
+            delivery, client communication, documentation, quoting, billing,
+            and performance visibility.
+          </p>
+        </div>
+        <div class="feature-lines reveal">
+          <article>
+            <h3>Projects and clients</h3>
+            <p>
+              Organize delivery across projects, client records, and detail
+              pages without bouncing between CRM, task lists, and spreadsheets.
+            </p>
+          </article>
+          <article>
+            <h3>Quotes and invoices</h3>
+            <p>
+              Create proposals, quotations, and invoices with plan-aware limits
+              and a workflow that moves naturally from lead to payment.
+            </p>
+          </article>
+          <article>
+            <h3>Files and records</h3>
+            <p>
+              Store contracts, assets, PDFs, and project files in a secure cloud
+              structure tied to the user account.
+            </p>
+          </article>
+          <article>
+            <h3>Team and analytics</h3>
+            <p>
+              Invite collaborators, manage role-based workflows, and keep an
+              eye on revenue, conversions, and pending work from the same
+              system.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow" class="content-section workflow-section">
+        <div class="workflow-sticky">
+          <p class="eyebrow">Workflow Story</p>
+          <h2>Built around how freelance projects actually move.</h2>
+          <p>
+            The app structure in this codebase points to a clear lifecycle:
+            attract leads, qualify them, quote the work, manage the project,
+            deliver files, invoice the client, and review the numbers.
+          </p>
+        </div>
+        <div class="workflow-steps">
+          <article class="reveal">
+            <span>01</span>
+            <h3>Capture demand</h3>
+            <p>
+              Lead management pages, status pipelines, and conversion flows help
+              you keep new work visible before it slips into chat history.
+            </p>
+          </article>
+          <article class="reveal">
+            <span>02</span>
+            <h3>Scope and close</h3>
+            <p>
+              Quotations, client data, and plan configuration let you move from
+              interest to approved work with less admin friction.
+            </p>
+          </article>
+          <article class="reveal">
+            <span>03</span>
+            <h3>Deliver with context</h3>
+            <p>
+              Projects, files, branding settings, and time tracking keep the
+              operational details attached to the work instead of buried in
+              folders and notes.
+            </p>
+          </article>
+          <article class="reveal">
+            <span>04</span>
+            <h3>Measure the business</h3>
+            <p>
+              Revenue and conversion metrics provide a quick read on paid
+              invoices, pending receivables, and client pipeline health.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="pricing" class="content-section pricing-section">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Pricing</p>
+          <h2>Simple plans that mirror the app’s current plan structure.</h2>
+          <p>
+            These plan tiers are based on the pricing logic currently defined in
+            the mobile app code. Final store pricing and taxes can vary by
+            platform and region.
+          </p>
+        </div>
+        <div class="pricing-grid">
+          <article class="pricing-tier reveal">
+            <p class="tier-name">Starter</p>
+            <h3>$0<span>/month</span></h3>
+            <ul>
+              <li>5 projects</li>
+              <li>10 clients</li>
+              <li>Basic invoicing</li>
+              <li>Email support</li>
+            </ul>
+          </article>
+          <article class="pricing-tier featured reveal">
+            <p class="tier-name">Pro</p>
+            <h3>$19<span>/month</span></h3>
+            <ul>
+              <li>Unlimited projects</li>
+              <li>Unlimited clients</li>
+              <li>Advanced invoicing and quotations</li>
+              <li>Team collaboration for up to 3 users</li>
+              <li>Priority support</li>
+            </ul>
+          </article>
+          <article class="pricing-tier reveal">
+            <p class="tier-name">Agency</p>
+            <h3>$49<span>/month</span></h3>
+            <ul>
+              <li>Everything in Pro</li>
+              <li>Unlimited team members</li>
+              <li>Custom branding</li>
+              <li>Analytics dashboard</li>
+              <li>Dedicated support</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="content-section faq-section">
+        <div class="section-intro reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>What people usually need before launch.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="reveal">
+            <summary>What does DevFlow actually do?</summary>
+            <p>
+              DevFlow is a mobile workspace for freelancers and small agencies
+              to manage client operations: projects, leads, clients, files,
+              quotations, invoices, analytics, branding, subscriptions, and
+              team activity.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>Does DevFlow collect payment card data directly?</summary>
+            <p>
+              The current codebase handles subscriptions through Apple App Store
+              and Google Play purchase frameworks. Payment processing is handled
+              by those platform providers rather than stored directly in the
+              app.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>How is account deletion handled?</summary>
+            <p>
+              The app includes an in-app delete-account flow under Security &
+              Privacy. The website also includes a dedicated account deletion
+              page so users can understand the process before downloading.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>Where can users read the legal pages?</summary>
+            <p>
+              This site includes public pages for privacy, terms, support, and
+              account deletion so the links can be used in app store listings,
+              help centers, and onboarding emails.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="content-section closing-section reveal">
+        <p class="eyebrow">Launch Ready</p>
+        <h2>Give the app a public home before the store listing goes live.</h2>
+        <p>
+          Use this site as the public-facing landing page for early access,
+          store review links, and customer trust pages.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="./support.html#contact"
+            >Contact Support</a
+          >
+          <a class="button button-secondary" href="./terms.html"
+            >Read Terms</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand footer-brand" href="./index.html">
+          <img src="./assets/app-icon.png" alt="DevFlow app icon" />
+          <span>DevFlow</span>
+        </a>
+        <p>
+          A mobile operating system for developers, freelancers, and small
+          agencies.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+        <a href="./support.html">Support</a>
+        <a href="./account-deletion.html">Account Deletion</a>
+      </div>
+      <p class="footer-meta">
+        <span id="year"></span> DevFlow. Built for launch, review, and early
+        customer trust.
+      </p>
+    </footer>
+  </body>
+</html>
