@@ -3,337 +3,900 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevFlow | Freelancer Operating System</title>
-    <meta
-      name="description"
-      content="DevFlow is a mobile operating system for freelancers and small agencies to manage clients, projects, quotes, invoices, files, analytics, and team workflows."
-    />
+    <meta name="theme-color" content="#0a0b0f" />
+    <title>DevFlow — The Operating System for Freelancers</title>
+    <meta name="description" content="DevFlow is the all-in-one mobile operating system for freelancers and small agencies. Manage clients, projects, quotes, invoices, time tracking, analytics, and team workflows — all from your phone." />
+    <meta property="og:title" content="DevFlow — The Operating System for Freelancers" />
+    <meta property="og:description" content="Projects, clients, quotes, invoices, time tracking, analytics, and team workflows in one mobile-first system." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/app-icon.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="./assets/app-icon.png" />
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./app.js"></script>
   </head>
-  <body class="site-shell">
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="DevFlow home">
-        <img src="./assets/app-icon.png" alt="DevFlow app icon" />
-        <span>DevFlow</span>
-      </a>
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="site-nav"
-      >
-        Menu
-      </button>
-      <nav id="site-nav" class="site-nav">
-        <a href="#features">Features</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="./privacy.html">Privacy</a>
-        <a href="./support.html" class="nav-cta">Support</a>
-      </nav>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- ── HEADER ────────────────────────────────────────────── -->
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+
+        <!-- Brand -->
+        <a class="brand" href="./index.html" aria-label="DevFlow home">
+          <img src="./assets/app-icon.png" alt="" width="26" height="26" decoding="async" aria-hidden="true" />
+          DevFlow
+        </a>
+
+        <!-- Primary nav -->
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+
+          <!-- Features (dropdown) -->
+          <div class="nav-item">
+            <span class="nav-link" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+              Features
+              <svg class="nav-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <div class="nav-dropdown" role="menu">
+              <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                <span class="dropdown-icon">🎯</span>
+                <span class="dropdown-text">
+                  <strong>Lead Pipeline</strong>
+                  <span>Capture, track, and convert leads</span>
+                </span>
+              </a>
+              <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                <span class="dropdown-icon">📋</span>
+                <span class="dropdown-text">
+                  <strong>Project Management</strong>
+                  <span>Track work from start to delivery</span>
+                </span>
+              </a>
+              <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                <span class="dropdown-icon">💳</span>
+                <span class="dropdown-text">
+                  <strong>Invoicing &amp; Quotes</strong>
+                  <span>Estimate, invoice, and get paid</span>
+                </span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                <span class="dropdown-icon">📊</span>
+                <span class="dropdown-text">
+                  <strong>Analytics</strong>
+                  <span>Revenue, conversion, and pipeline</span>
+                </span>
+              </a>
+              <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                <span class="dropdown-icon">👥</span>
+                <span class="dropdown-text">
+                  <strong>Team Collaboration</strong>
+                  <span>Shared visibility for agencies</span>
+                </span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                <span class="dropdown-icon">⏱️</span>
+                <span class="dropdown-text">
+                  <strong>Time Tracking</strong>
+                  <span>Log hours, build timesheets</span>
+                </span>
+              </a>
+              <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                <span class="dropdown-icon">📁</span>
+                <span class="dropdown-text">
+                  <strong>File &amp; Document Storage</strong>
+                  <span>Contracts and assets, all linked</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Workflow -->
+          <div class="nav-item">
+            <a class="nav-link" href="./index.html#workflow">Workflow</a>
+          </div>
+
+          <!-- Pricing -->
+          <div class="nav-item">
+            <a class="nav-link" href="./index.html#pricing">Pricing</a>
+          </div>
+
+          <!-- Legal (dropdown) -->
+          <div class="nav-item">
+            <span class="nav-link" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+              Legal
+              <svg class="nav-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <div class="nav-dropdown" role="menu">
+              <a class="dropdown-link" href="./privacy.html" role="menuitem">
+                <span class="dropdown-icon">🔐</span>
+                <span class="dropdown-text">
+                  <strong>Privacy Policy</strong>
+                  <span>How we handle your data</span>
+                </span>
+              </a>
+              <a class="dropdown-link" href="./terms.html" role="menuitem">
+                <span class="dropdown-icon">📄</span>
+                <span class="dropdown-text">
+                  <strong>Terms of Service</strong>
+                  <span>Rules governing access</span>
+                </span>
+              </a>
+              <a class="dropdown-link" href="./account-deletion.html" role="menuitem">
+                <span class="dropdown-icon">🗑️</span>
+                <span class="dropdown-text">
+                  <strong>Account Deletion</strong>
+                  <span>Delete your data anytime</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Support -->
+          <div class="nav-item">
+            <a class="nav-link" href="./support.html">Support</a>
+          </div>
+
+        </nav>
+
+        <!-- Download CTAs -->
+        <div class="header-actions">
+          <a class="store-btn store-btn-apple store-btn-sm" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Download on the App Store">
+              <svg width="16" height="16" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Download on</span>
+                <span class="store-btn-name">App Store</span>
+              </span>
+            </a>
+          <a class="store-btn store-btn-google store-btn-sm" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gp-a" x1="61.29%" x2="26.78%" y1="5.08%" y2="71.41%"><stop offset="0" stop-color="#00A0FF"/><stop offset=".007" stop-color="#00A1FF"/><stop offset=".26" stop-color="#00BEFF"/><stop offset=".512" stop-color="#00D2FF"/><stop offset=".76" stop-color="#00DFFF"/><stop offset="1" stop-color="#00E3FF"/></linearGradient><linearGradient id="gp-b" x1="107.68%" x2="-13.94%" y1="49.98%" y2="49.98%"><stop offset="0" stop-color="#FFE000"/><stop offset=".409" stop-color="#FFBD00"/><stop offset=".775" stop-color="orange"/><stop offset="1" stop-color="#FF9C00"/></linearGradient><linearGradient id="gp-c" x1="125.56%" x2="-37.66%" y1="30.9%" y2="136.01%"><stop offset="0" stop-color="#FF3A44"/><stop offset="1" stop-color="#C31162"/></linearGradient><linearGradient id="gp-d" x1="-18.81%" x2="42.15%" y1="-11.47%" y2="35.75%"><stop offset="0" stop-color="#32A071"/><stop offset=".069" stop-color="#2DA771"/><stop offset=".476" stop-color="#15CF74"/><stop offset=".801" stop-color="#06E775"/><stop offset="1" stop-color="#00F076"/></linearGradient></defs><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="url(#gp-a)"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="url(#gp-b)"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="url(#gp-c)"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="url(#gp-d)"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Get it on</span>
+                <span class="store-btn-name">Google Play</span>
+              </span>
+            </a>
+          <!-- Mobile hamburger -->
+          <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <path d="M2 3.5h11M2 7.5h11M2 11.5h11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
 
-    <main>
+    <!-- ── MOBILE NAV ─────────────────────────────────────────── -->
+    <div class="mobile-nav-overlay" id="mobile-nav" aria-label="Mobile navigation">
+      <div class="mobile-nav-links">
+        <a href="./index.html#features">Features</a>
+        <a href="./index.html#workflow">Workflow</a>
+        <a href="./index.html#pricing">Pricing</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./account-deletion.html">Account Deletion</a>
+        <a href="./support.html">Support</a>
+      </div>
+      <div class="mobile-nav-actions" style="display:grid;gap:.75rem;padding-top:1rem;border-top:1px solid var(--border);">
+        <a class="store-btn store-btn-apple store-btn-sm" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Download on the App Store">
+              <svg width="16" height="16" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Download on</span>
+                <span class="store-btn-name">App Store</span>
+              </span>
+            </a>
+        <a class="store-btn store-btn-google store-btn-sm" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gp-a" x1="61.29%" x2="26.78%" y1="5.08%" y2="71.41%"><stop offset="0" stop-color="#00A0FF"/><stop offset=".007" stop-color="#00A1FF"/><stop offset=".26" stop-color="#00BEFF"/><stop offset=".512" stop-color="#00D2FF"/><stop offset=".76" stop-color="#00DFFF"/><stop offset="1" stop-color="#00E3FF"/></linearGradient><linearGradient id="gp-b" x1="107.68%" x2="-13.94%" y1="49.98%" y2="49.98%"><stop offset="0" stop-color="#FFE000"/><stop offset=".409" stop-color="#FFBD00"/><stop offset=".775" stop-color="orange"/><stop offset="1" stop-color="#FF9C00"/></linearGradient><linearGradient id="gp-c" x1="125.56%" x2="-37.66%" y1="30.9%" y2="136.01%"><stop offset="0" stop-color="#FF3A44"/><stop offset="1" stop-color="#C31162"/></linearGradient><linearGradient id="gp-d" x1="-18.81%" x2="42.15%" y1="-11.47%" y2="35.75%"><stop offset="0" stop-color="#32A071"/><stop offset=".069" stop-color="#2DA771"/><stop offset=".476" stop-color="#15CF74"/><stop offset=".801" stop-color="#06E775"/><stop offset="1" stop-color="#00F076"/></linearGradient></defs><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="url(#gp-a)"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="url(#gp-b)"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="url(#gp-c)"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="url(#gp-d)"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Get it on</span>
+                <span class="store-btn-name">Google Play</span>
+              </span>
+            </a>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+         MAIN CONTENT
+         ════════════════════════════════════════════════════ -->
+    <main id="main-content">
+
+      <!-- ── HERO ────────────────────────────────────────────── -->
       <section class="hero">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">DevFlow for iPhone and Android</p>
-          <h1>Run your freelance business without living in six different apps.</h1>
-          <p class="hero-text">
-            DevFlow brings projects, clients, quotes, invoices, time tracking,
-            files, leads, analytics, and team workflows into one mobile-first
-            operating system built for developers and small studios.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./support.html#beta"
-              >Request Beta Access</a
-            >
-            <a class="button button-secondary" href="./privacy.html"
-              >Read Privacy Policy</a
-            >
-          </div>
-          <ul class="hero-notes" aria-label="Key highlights">
-            <li>Mobile-first workflows for solo developers and agencies</li>
-            <li>Quotes, invoices, files, and lead tracking in one place</li>
-            <li>Built on Firebase authentication, storage, and real-time sync</li>
-          </ul>
-        </div>
+        <!-- Animated glow orbs -->
+        <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
 
-        <div class="hero-visual reveal">
-          <div class="hero-orbit"></div>
-          <div class="phone-stage">
-            <div class="phone-shell">
-              <div class="phone-topline">
-                <span class="signal-dot"></span>
-                <span>Today</span>
-                <span>DevFlow</span>
+        <div class="hero-inner">
+          <div class="hero-badge reveal">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              Now available on iOS &amp; Android
+            </span>
+          </div>
+
+          <h1 class="reveal reveal-delay-1">
+            The Operating System<br />for Freelancers
+          </h1>
+
+          <p class="hero-lead reveal reveal-delay-2">
+            DevFlow gives developers, consultants, and small studios one mobile workspace
+            to run every part of their client business — from first lead to final payment.
+          </p>
+
+          <div class="hero-actions reveal reveal-delay-3">
+            <a class="store-btn store-btn-apple store-btn-lg" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Download DevFlow on the App Store">
+              <svg width="24" height="24" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Download on the</span>
+                <span class="store-btn-name">App Store</span>
+              </span>
+            </a>
+            <a class="store-btn store-btn-google store-btn-lg" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Get DevFlow on Google Play">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gp-a" x1="61.29%" x2="26.78%" y1="5.08%" y2="71.41%"><stop offset="0" stop-color="#00A0FF"/><stop offset=".007" stop-color="#00A1FF"/><stop offset=".26" stop-color="#00BEFF"/><stop offset=".512" stop-color="#00D2FF"/><stop offset=".76" stop-color="#00DFFF"/><stop offset="1" stop-color="#00E3FF"/></linearGradient><linearGradient id="gp-b" x1="107.68%" x2="-13.94%" y1="49.98%" y2="49.98%"><stop offset="0" stop-color="#FFE000"/><stop offset=".409" stop-color="#FFBD00"/><stop offset=".775" stop-color="orange"/><stop offset="1" stop-color="#FF9C00"/></linearGradient><linearGradient id="gp-c" x1="125.56%" x2="-37.66%" y1="30.9%" y2="136.01%"><stop offset="0" stop-color="#FF3A44"/><stop offset="1" stop-color="#C31162"/></linearGradient><linearGradient id="gp-d" x1="-18.81%" x2="42.15%" y1="-11.47%" y2="35.75%"><stop offset="0" stop-color="#32A071"/><stop offset=".069" stop-color="#2DA771"/><stop offset=".476" stop-color="#15CF74"/><stop offset=".801" stop-color="#06E775"/><stop offset="1" stop-color="#00F076"/></linearGradient></defs><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="url(#gp-a)"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="url(#gp-b)"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="url(#gp-c)"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="url(#gp-d)"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Get it on</span>
+                <span class="store-btn-name">Google Play</span>
+              </span>
+            </a>
+          </div>
+
+          <!-- Stats strip -->
+          <div class="hero-stats reveal reveal-delay-3">
+            <div class="hero-stat">
+              <div class="hero-stat-val">Free<span>*</span></div>
+              <div class="hero-stat-label">To start</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <div class="hero-stat-val">8<span>+</span></div>
+              <div class="hero-stat-label">Core features</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <div class="hero-stat-val">iOS<span> &amp; </span>Android</div>
+              <div class="hero-stat-label">Both platforms</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <div class="hero-stat-val">5<span>+</span></div>
+              <div class="hero-stat-label">Languages</div>
+            </div>
+          </div>
+
+          <!-- App mockup -->
+          <div class="hero-visual reveal" style="transition-delay:320ms;">
+            <div class="window-bar">
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+              <div class="window-url">app.devflow.io / dashboard</div>
+            </div>
+            <div class="app-mockup">
+              <div class="app-sidebar">
+                <div class="sidebar-section-label">Workspace</div>
+                <div class="sidebar-item active">
+                  <span class="sidebar-icon" style="border-radius:50%;background:var(--accent-hi);opacity:1;width:12px;height:12px;"></span>Dashboard
+                </div>
+                <div class="sidebar-item"><span class="sidebar-icon" style="background:var(--ink-faint);border-radius:3px;"></span>Projects</div>
+                <div class="sidebar-item"><span class="sidebar-icon" style="background:var(--ink-faint);border-radius:50%;"></span>Clients</div>
+                <div class="sidebar-item"><span class="sidebar-icon" style="background:var(--ink-faint);border-radius:3px;"></span>Leads</div>
+                <div class="sidebar-section-label">Finance</div>
+                <div class="sidebar-item"><span class="sidebar-icon" style="background:var(--ink-faint);border-radius:3px;"></span>Invoices</div>
+                <div class="sidebar-item"><span class="sidebar-icon" style="background:var(--ink-faint);border-radius:3px;"></span>Quotes</div>
+                <div class="sidebar-section-label">Insights</div>
+                <div class="sidebar-item"><span class="sidebar-icon" style="background:var(--ink-faint);border-radius:3px;"></span>Analytics</div>
+                <div class="sidebar-item"><span class="sidebar-icon" style="background:var(--ink-faint);border-radius:3px;"></span>Team</div>
               </div>
-              <div class="phone-scene">
-                <div class="scene-heading">
-                  <span>Revenue pulse</span>
-                  <strong>Everything in motion</strong>
+              <div class="app-main">
+                <div class="app-topbar">
+                  <span class="app-page-title">Dashboard</span>
+                  <span class="badge" style="font-size:.68rem;padding:.17rem .55rem;">April 2026</span>
                 </div>
-                <div class="scene-bars" aria-hidden="true">
-                  <span style="height: 35%"></span>
-                  <span style="height: 48%"></span>
-                  <span style="height: 62%"></span>
-                  <span style="height: 76%"></span>
-                  <span style="height: 92%"></span>
+                <div class="metric-row">
+                  <div class="metric-card">
+                    <div class="metric-label">Revenue</div>
+                    <div class="metric-value">$12.4K</div>
+                    <div class="metric-change up">↑ 18% vs last</div>
+                  </div>
+                  <div class="metric-card">
+                    <div class="metric-label">Projects</div>
+                    <div class="metric-value">7</div>
+                    <div class="metric-change neutral">3 due soon</div>
+                  </div>
+                  <div class="metric-card">
+                    <div class="metric-label">Invoices</div>
+                    <div class="metric-value">$4.2K</div>
+                    <div class="metric-change up">2 sent today</div>
+                  </div>
+                  <div class="metric-card">
+                    <div class="metric-label">Leads</div>
+                    <div class="metric-value">11</div>
+                    <div class="metric-change up">↑ 4 new</div>
+                  </div>
                 </div>
-                <div class="scene-flow">
-                  <div>
-                    <small>Lead</small>
-                    <strong>Discovery call</strong>
+                <div class="app-project-table">
+                  <div class="table-header">
+                    <span>Project</span><span>Status</span><span>Client</span><span>Value</span>
                   </div>
-                  <div>
-                    <small>Quote</small>
-                    <strong>Sent in 4 min</strong>
+                  <div class="table-row">
+                    <span class="table-name">Brand Identity — Novo Labs</span>
+                    <span><span class="status-pill status-active">Active</span></span>
+                    <span>Novo Labs</span>
+                    <span style="color:var(--green);font-weight:600;">$3,800</span>
                   </div>
-                  <div>
-                    <small>Invoice</small>
-                    <strong>Paid this week</strong>
+                  <div class="table-row">
+                    <span class="table-name">Mobile App MVP</span>
+                    <span><span class="status-pill status-review">In Review</span></span>
+                    <span>TechVault</span>
+                    <span style="color:var(--amber);font-weight:600;">$6,500</span>
+                  </div>
+                  <div class="table-row">
+                    <span class="table-name">SEO &amp; Content Overhaul</span>
+                    <span><span class="status-pill status-pending">Pending</span></span>
+                    <span>Growly.io</span>
+                    <span style="font-weight:600;">$2,100</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="hero-caption">
-              <span>Freelancer OS</span>
-              <p>
-                From first client message to final payment, DevFlow is designed
-                to keep the operational side of client work moving.
-              </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── STATS MARQUEE ───────────────────────────────────── -->
+      <div class="stats-band" aria-hidden="true">
+        <div class="stats-inner">
+          <div class="stat-item"><span class="stat-num">iOS &amp; Android</span><span class="stat-lbl">Native mobile</span></div>
+          <div class="stat-item"><span class="stat-num">5+ Languages</span><span class="stat-lbl">Localised app</span></div>
+          <div class="stat-item"><span class="stat-num">Firebase</span><span class="stat-lbl">Real-time backend</span></div>
+          <div class="stat-item"><span class="stat-num">Leads → Invoices</span><span class="stat-lbl">One connected flow</span></div>
+          <div class="stat-item"><span class="stat-num">Plan-aware billing</span><span class="stat-lbl">Apple &amp; Google Pay</span></div>
+          <div class="stat-item"><span class="stat-num">Mobile-first</span><span class="stat-lbl">Built for fast ops</span></div>
+          <div class="stat-item"><span class="stat-num">iOS &amp; Android</span><span class="stat-lbl">Native mobile</span></div>
+          <div class="stat-item"><span class="stat-num">5+ Languages</span><span class="stat-lbl">Localised app</span></div>
+          <div class="stat-item"><span class="stat-num">Firebase</span><span class="stat-lbl">Real-time backend</span></div>
+          <div class="stat-item"><span class="stat-num">Leads → Invoices</span><span class="stat-lbl">One connected flow</span></div>
+          <div class="stat-item"><span class="stat-num">Plan-aware billing</span><span class="stat-lbl">Apple &amp; Google Pay</span></div>
+          <div class="stat-item"><span class="stat-num">Mobile-first</span><span class="stat-lbl">Built for fast ops</span></div>
+        </div>
+      </div>
+
+      <!-- ── VALUE PROPS ─────────────────────────────────────── -->
+      <section id="features" class="section">
+        <div class="container">
+          <div class="section-header centered reveal">
+            <span class="eyebrow">Core Capabilities</span>
+            <h2>One place for the work<br />around the work.</h2>
+            <p class="sub">Not another generic dashboard. A structured workspace for freelance delivery, billing, documentation, and team coordination.</p>
+          </div>
+          <div class="value-grid reveal">
+            <div class="value-card"><div class="value-icon">🎯</div><h3>Lead Pipeline</h3><p>Capture opportunities, track status, and convert leads into paid projects without losing context.</p></div>
+            <div class="value-card"><div class="value-icon">📋</div><h3>Project Management</h3><p>Structured records with status, milestones, deliverables, file attachments, and time tracking.</p></div>
+            <div class="value-card"><div class="value-icon">💳</div><h3>Quotes &amp; Invoices</h3><p>Move from estimate to invoice in seconds. Plan-aware billing and subscription management included.</p></div>
+            <div class="value-card"><div class="value-icon">🗂️</div><h3>Client Records</h3><p>Every client has their own view: history, documents, projects, and contact details — all linked.</p></div>
+            <div class="value-card"><div class="value-icon">📊</div><h3>Revenue Analytics</h3><p>Revenue, receivables, conversion rates, and pipeline health from one live dashboard.</p></div>
+            <div class="value-card"><div class="value-icon">👥</div><h3>Team Collaboration</h3><p>Add collaborators, share project visibility, and coordinate agency-level workflows.</p></div>
+            <div class="value-card"><div class="value-icon">⏱️</div><h3>Time Tracking</h3><p>Log hours against projects and clients directly from the app. Build accurate timesheets and spot scope creep before it hits delivery.</p></div>
+            <div class="value-card"><div class="value-icon">📁</div><h3>File &amp; Document Storage</h3><p>Attach contracts, briefs, design files, and assets to projects and clients. Everything stays linked, searchable, and accessible from your phone.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FEATURE SHOWCASE 1 ──────────────────────────────── -->
+      <section class="section" style="padding-top:0;">
+        <div class="container">
+          <div class="feature-showcase reveal">
+            <div class="feature-content">
+              <span class="eyebrow">Lead to Payment</span>
+              <h2>Your entire client lifecycle in one motion.</h2>
+              <p>DevFlow models your real business rhythm — attract, qualify, scope, deliver, invoice, and review — without switching apps.</p>
+              <ul class="feature-list">
+                <li class="feature-list-item"><span class="check-icon">✓</span>Lead capture with status stages and follow-up reminders</li>
+                <li class="feature-list-item"><span class="check-icon">✓</span>Quotation builder with itemised scope and client-facing output</li>
+                <li class="feature-list-item"><span class="check-icon">✓</span>Invoice generation linked to project and quote records</li>
+                <li class="feature-list-item"><span class="check-icon">✓</span>Pipeline view to see every deal's current stage at a glance</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <div class="pipeline-visual">
+                <div class="pipeline-col-labels">
+                  <span class="pipeline-col-label">Leads</span>
+                  <span class="pipeline-col-label">Quoted</span>
+                  <span class="pipeline-col-label">Active</span>
+                  <span class="pipeline-col-label">Invoiced</span>
+                </div>
+                <div class="pipeline-cols">
+                  <div class="pipeline-col">
+                    <div class="pipeline-card"><div class="pipeline-card-title">Design Studio X</div><div class="pipeline-card-meta">Discovery · $4K</div></div>
+                    <div class="pipeline-card"><div class="pipeline-card-title">Startup Bloom</div><div class="pipeline-card-meta">Warm lead</div></div>
+                    <div class="pipeline-card"><div class="pipeline-card-title">Retail Co.</div><div class="pipeline-card-meta">Cold outreach</div></div>
+                  </div>
+                  <div class="pipeline-col">
+                    <div class="pipeline-card"><div class="pipeline-card-title">Novo Labs</div><div class="pipeline-card-meta">Sent · $3,800</div></div>
+                    <div class="pipeline-card"><div class="pipeline-card-title">TechVault</div><div class="pipeline-card-meta">Awaiting ok</div></div>
+                  </div>
+                  <div class="pipeline-col">
+                    <div class="pipeline-card"><div class="pipeline-card-title">Growly.io</div><div class="pipeline-card-meta">Active · $2,100</div></div>
+                    <div class="pipeline-card"><div class="pipeline-card-title">Orion Media</div><div class="pipeline-card-meta">Files up</div></div>
+                  </div>
+                  <div class="pipeline-col">
+                    <div class="pipeline-card"><div class="pipeline-card-title">Pinnacle Web</div><div class="pipeline-card-meta">Paid ✓</div></div>
+                    <div class="pipeline-card"><div class="pipeline-card-title">Apex Brands</div><div class="pipeline-card-meta">Pending $1.4K</div></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="features" class="content-section split-section">
-        <div class="section-intro reveal">
-          <p class="eyebrow">Core Surface</p>
-          <h2>One app for the work around the work.</h2>
-          <p>
-            The product language in this repo is consistent: DevFlow is not a
-            generic note app. It is a structured workspace for freelance
-            delivery, client communication, documentation, quoting, billing,
-            and performance visibility.
-          </p>
-        </div>
-        <div class="feature-lines reveal">
-          <article>
-            <h3>Projects and clients</h3>
-            <p>
-              Organize delivery across projects, client records, and detail
-              pages without bouncing between CRM, task lists, and spreadsheets.
-            </p>
-          </article>
-          <article>
-            <h3>Quotes and invoices</h3>
-            <p>
-              Create proposals, quotations, and invoices with plan-aware limits
-              and a workflow that moves naturally from lead to payment.
-            </p>
-          </article>
-          <article>
-            <h3>Files and records</h3>
-            <p>
-              Store contracts, assets, PDFs, and project files in a secure cloud
-              structure tied to the user account.
-            </p>
-          </article>
-          <article>
-            <h3>Team and analytics</h3>
-            <p>
-              Invite collaborators, manage role-based workflows, and keep an
-              eye on revenue, conversions, and pending work from the same
-              system.
-            </p>
-          </article>
+      <!-- ── FEATURE SHOWCASE 2 ──────────────────────────────── -->
+      <section class="section" style="padding-top:0;">
+        <div class="container">
+          <div class="feature-showcase reverse reveal">
+            <div class="feature-content">
+              <span class="eyebrow">Finance &amp; Billing</span>
+              <h2>From estimate to payment — cleanly.</h2>
+              <p>Scope it, quote it, invoice it, get paid. DevFlow's billing surfaces are built around the real workflow of small-business deal-making.</p>
+              <ul class="feature-list">
+                <li class="feature-list-item"><span class="check-icon">✓</span>Multi-currency quote templates with line items, taxes, and discounts</li>
+                <li class="feature-list-item"><span class="check-icon">✓</span>Plan-aware invoice limits that scale with your subscription</li>
+                <li class="feature-list-item"><span class="check-icon">✓</span>Subscription management via Apple App Store and Google Play</li>
+                <li class="feature-list-item"><span class="check-icon">✓</span>Receivables overview with overdue flags and payment status</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <div class="invoice-visual">
+                <div class="invoice-header"><span class="invoice-title">Invoice #INV-0041</span><span class="status-pill status-active">Sent</span></div>
+                <div class="invoice-row"><span class="invoice-row-name">Brand Identity — Full Package</span><span style="color:var(--ink);font-weight:600;">$2,400</span></div>
+                <div class="invoice-row"><span class="invoice-row-name">Logo Revisions (×3)</span><span style="color:var(--ink);font-weight:600;">$600</span></div>
+                <div class="invoice-row"><span class="invoice-row-name">Style Guide Export</span><span style="color:var(--ink);font-weight:600;">$400</span></div>
+                <div class="invoice-row" style="border-top:1px solid var(--border-hi);background:var(--bg-overlay);">
+                  <span class="invoice-row-name" style="font-weight:700;color:var(--ink);">Total</span>
+                  <span style="color:var(--green);font-size:1rem;font-weight:700;">$3,400</span>
+                </div>
+                <div style="display:flex;gap:.4rem;margin-top:.4rem;">
+                  <div style="flex:1;background:var(--bg-overlay);border:1px solid var(--border);border-radius:var(--radius-xs);padding:.5rem;text-align:center;font-size:.73rem;color:var(--ink-faint);">Due: Apr 30</div>
+                  <div style="flex:1;background:var(--green-soft);border:1px solid rgba(34,197,94,.2);border-radius:var(--radius-xs);padding:.5rem;text-align:center;font-size:.73rem;color:var(--green);font-weight:600;">Mark as Paid</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="workflow" class="content-section workflow-section">
-        <div class="workflow-sticky">
-          <p class="eyebrow">Workflow Story</p>
-          <h2>Built around how freelance projects actually move.</h2>
-          <p>
-            The app structure in this codebase points to a clear lifecycle:
-            attract leads, qualify them, quote the work, manage the project,
-            deliver files, invoice the client, and review the numbers.
-          </p>
-        </div>
-        <div class="workflow-steps">
-          <article class="reveal">
-            <span>01</span>
-            <h3>Capture demand</h3>
-            <p>
-              Lead management pages, status pipelines, and conversion flows help
-              you keep new work visible before it slips into chat history.
-            </p>
-          </article>
-          <article class="reveal">
-            <span>02</span>
-            <h3>Scope and close</h3>
-            <p>
-              Quotations, client data, and plan configuration let you move from
-              interest to approved work with less admin friction.
-            </p>
-          </article>
-          <article class="reveal">
-            <span>03</span>
-            <h3>Deliver with context</h3>
-            <p>
-              Projects, files, branding settings, and time tracking keep the
-              operational details attached to the work instead of buried in
-              folders and notes.
-            </p>
-          </article>
-          <article class="reveal">
-            <span>04</span>
-            <h3>Measure the business</h3>
-            <p>
-              Revenue and conversion metrics provide a quick read on paid
-              invoices, pending receivables, and client pipeline health.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="pricing" class="content-section pricing-section">
-        <div class="section-intro reveal">
-          <p class="eyebrow">Pricing</p>
-          <h2>Simple plans that mirror the app’s current plan structure.</h2>
-          <p>
-            These plan tiers are based on the pricing logic currently defined in
-            the mobile app code. Final store pricing and taxes can vary by
-            platform and region.
-          </p>
-        </div>
-        <div class="pricing-grid">
-          <article class="pricing-tier reveal">
-            <p class="tier-name">Starter</p>
-            <h3>$0<span>/month</span></h3>
-            <ul>
-              <li>5 projects</li>
-              <li>10 clients</li>
-              <li>Basic invoicing</li>
-              <li>Email support</li>
-            </ul>
-          </article>
-          <article class="pricing-tier featured reveal">
-            <p class="tier-name">Pro</p>
-            <h3>$19<span>/month</span></h3>
-            <ul>
-              <li>Unlimited projects</li>
-              <li>Unlimited clients</li>
-              <li>Advanced invoicing and quotations</li>
-              <li>Team collaboration for up to 3 users</li>
-              <li>Priority support</li>
-            </ul>
-          </article>
-          <article class="pricing-tier reveal">
-            <p class="tier-name">Agency</p>
-            <h3>$49<span>/month</span></h3>
-            <ul>
-              <li>Everything in Pro</li>
-              <li>Unlimited team members</li>
-              <li>Custom branding</li>
-              <li>Analytics dashboard</li>
-              <li>Dedicated support</li>
-            </ul>
-          </article>
+      <!-- ── FEATURE SHOWCASE 3 ──────────────────────────────── -->
+      <section class="section" style="padding-top:0;">
+        <div class="container">
+          <div class="feature-showcase reveal">
+            <div class="feature-content">
+              <span class="eyebrow">Analytics &amp; Insights</span>
+              <h2>Measure what actually moves your business.</h2>
+              <p>Revenue trends, pipeline conversion, invoice aging, and team activity — all visualised from the same operating surface.</p>
+              <ul class="feature-list">
+                <li class="feature-list-item"><span class="check-icon">✓</span>Monthly revenue chart with trend comparison</li>
+                <li class="feature-list-item"><span class="check-icon">✓</span>Lead-to-project conversion rate tracking</li>
+                <li class="feature-list-item"><span class="check-icon">✓</span>Invoice aging and outstanding receivables breakdown</li>
+                <li class="feature-list-item"><span class="check-icon">✓</span>Team activity and project contribution overview</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <div class="analytics-visual">
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <span style="font-size:.87rem;font-weight:600;color:var(--ink);">Monthly Revenue</span>
+                  <span class="status-pill status-active" style="font-size:.67rem;">↑ 18% vs last month</span>
+                </div>
+                <div>
+                  <div class="chart-area">
+                    <div class="chart-bar" style="height:38%;animation-delay:.05s;"></div>
+                    <div class="chart-bar" style="height:52%;animation-delay:.10s;"></div>
+                    <div class="chart-bar" style="height:44%;animation-delay:.15s;"></div>
+                    <div class="chart-bar" style="height:65%;animation-delay:.20s;"></div>
+                    <div class="chart-bar" style="height:58%;animation-delay:.25s;"></div>
+                    <div class="chart-bar" style="height:80%;animation-delay:.30s;"></div>
+                    <div class="chart-bar" style="height:72%;animation-delay:.35s;"></div>
+                    <div class="chart-bar" style="height:91%;animation-delay:.40s;background:linear-gradient(180deg,var(--accent-hi),var(--accent));box-shadow:0 0 16px rgba(91,95,238,.35);"></div>
+                  </div>
+                  <div class="chart-labels"><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span></div>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin-top:.15rem;">
+                  <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-xs);padding:.65rem;text-align:center;">
+                    <div style="font-size:1rem;font-weight:700;color:var(--ink);">$12.4K</div>
+                    <div style="font-size:.67rem;color:var(--ink-faint);">Earned</div>
+                  </div>
+                  <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-xs);padding:.65rem;text-align:center;">
+                    <div style="font-size:1rem;font-weight:700;color:var(--amber);">$4.2K</div>
+                    <div style="font-size:.67rem;color:var(--ink-faint);">Pending</div>
+                  </div>
+                  <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-xs);padding:.65rem;text-align:center;">
+                    <div style="font-size:1rem;font-weight:700;color:var(--green);">73%</div>
+                    <div style="font-size:.67rem;color:var(--ink-faint);">Conversion</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="faq" class="content-section faq-section">
-        <div class="section-intro reveal">
-          <p class="eyebrow">FAQ</p>
-          <h2>What people usually need before launch.</h2>
-        </div>
-        <div class="faq-list">
-          <details class="reveal">
-            <summary>What does DevFlow actually do?</summary>
-            <p>
-              DevFlow is a mobile workspace for freelancers and small agencies
-              to manage client operations: projects, leads, clients, files,
-              quotations, invoices, analytics, branding, subscriptions, and
-              team activity.
-            </p>
-          </details>
-          <details class="reveal">
-            <summary>Does DevFlow collect payment card data directly?</summary>
-            <p>
-              The current codebase handles subscriptions through Apple App Store
-              and Google Play purchase frameworks. Payment processing is handled
-              by those platform providers rather than stored directly in the
-              app.
-            </p>
-          </details>
-          <details class="reveal">
-            <summary>How is account deletion handled?</summary>
-            <p>
-              The app includes an in-app delete-account flow under Security &
-              Privacy. The website also includes a dedicated account deletion
-              page so users can understand the process before downloading.
-            </p>
-          </details>
-          <details class="reveal">
-            <summary>Where can users read the legal pages?</summary>
-            <p>
-              This site includes public pages for privacy, terms, support, and
-              account deletion so the links can be used in app store listings,
-              help centers, and onboarding emails.
-            </p>
-          </details>
+      <!-- ── WORKFLOW ─────────────────────────────────────────── -->
+      <section id="workflow" class="section" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-raised);">
+        <div class="container">
+          <div class="workflow-section">
+            <div class="workflow-sticky reveal">
+              <span class="eyebrow">Workflow</span>
+              <h2>Built around how freelance projects actually move.</h2>
+              <p>DevFlow follows your natural business rhythm — attract, scope, deliver, invoice, and review — all in one connected surface.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.4rem;">
+                <a class="store-btn store-btn-apple" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Download DevFlow on the App Store">
+              <svg width="24" height="24" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Download on the</span>
+                <span class="store-btn-name">App Store</span>
+              </span>
+            </a>
+                <a class="store-btn store-btn-google" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Get DevFlow on Google Play">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gp-a" x1="61.29%" x2="26.78%" y1="5.08%" y2="71.41%"><stop offset="0" stop-color="#00A0FF"/><stop offset=".007" stop-color="#00A1FF"/><stop offset=".26" stop-color="#00BEFF"/><stop offset=".512" stop-color="#00D2FF"/><stop offset=".76" stop-color="#00DFFF"/><stop offset="1" stop-color="#00E3FF"/></linearGradient><linearGradient id="gp-b" x1="107.68%" x2="-13.94%" y1="49.98%" y2="49.98%"><stop offset="0" stop-color="#FFE000"/><stop offset=".409" stop-color="#FFBD00"/><stop offset=".775" stop-color="orange"/><stop offset="1" stop-color="#FF9C00"/></linearGradient><linearGradient id="gp-c" x1="125.56%" x2="-37.66%" y1="30.9%" y2="136.01%"><stop offset="0" stop-color="#FF3A44"/><stop offset="1" stop-color="#C31162"/></linearGradient><linearGradient id="gp-d" x1="-18.81%" x2="42.15%" y1="-11.47%" y2="35.75%"><stop offset="0" stop-color="#32A071"/><stop offset=".069" stop-color="#2DA771"/><stop offset=".476" stop-color="#15CF74"/><stop offset=".801" stop-color="#06E775"/><stop offset="1" stop-color="#00F076"/></linearGradient></defs><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="url(#gp-a)"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="url(#gp-b)"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="url(#gp-c)"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="url(#gp-d)"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Get it on</span>
+                <span class="store-btn-name">Google Play</span>
+              </span>
+            </a>
+              </div>
+            </div>
+            <div class="workflow-steps">
+              <article class="workflow-step reveal"><div class="step-num">01</div><div class="step-body"><h3>Capture demand</h3><p>Lead management with status stages, contact history, and conversion flows keep early opportunities visible before they disappear into chat history.</p></div></article>
+              <article class="workflow-step reveal reveal-delay-1"><div class="step-num">02</div><div class="step-body"><h3>Scope and close</h3><p>Quotation builder, client records, and plan-aware config make the transition from interest to approved work feel intentional — not chaotic.</p></div></article>
+              <article class="workflow-step reveal reveal-delay-2"><div class="step-num">03</div><div class="step-body"><h3>Deliver with context</h3><p>Projects, files, branding settings, and time tracking keep operational details attached to each engagement so nothing gets lost mid-delivery.</p></div></article>
+              <article class="workflow-step reveal reveal-delay-3"><div class="step-num">04</div><div class="step-body"><h3>Invoice and collect</h3><p>Generate invoices linked to quotes and projects. Track paid, pending, and overdue items from a single receivables view always in sync.</p></div></article>
+              <article class="workflow-step reveal reveal-delay-4"><div class="step-num">05</div><div class="step-body"><h3>Measure the business</h3><p>Revenue and conversion metrics give a clear read on paid invoices, pending receivables, pipeline health, and team performance each month.</p></div></article>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="content-section closing-section reveal">
-        <p class="eyebrow">Launch Ready</p>
-        <h2>Give the app a public home before the store listing goes live.</h2>
-        <p>
-          Use this site as the public-facing landing page for early access,
-          store review links, and customer trust pages.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="./support.html#contact"
-            >Contact Support</a
-          >
-          <a class="button button-secondary" href="./terms.html"
-            >Read Terms</a
-          >
+      <!-- ── AUDIENCE ─────────────────────────────────────────── -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header centered reveal">
+            <span class="eyebrow">Built For</span>
+            <h2>The people who need clarity<br />faster than another tool.</h2>
+          </div>
+          <div class="audience-grid">
+            <article class="audience-card reveal">
+              <span class="audience-emoji">🧑‍💻</span>
+              <span class="audience-tag">Solo Developers</span>
+              <h3>Keep client work organised without a bloated back office.</h3>
+              <p>Track projects, scope, invoices, and files from one mobile system that respects your time.</p>
+            </article>
+            <article class="audience-card reveal reveal-delay-1">
+              <span class="audience-emoji">🤝</span>
+              <span class="audience-tag">Consultants &amp; Freelancers</span>
+              <h3>Move from conversation to contract to payment more cleanly.</h3>
+              <p>Use lead, quotation, client, and invoice flows that mirror how real engagements are won and closed.</p>
+            </article>
+            <article class="audience-card reveal reveal-delay-2">
+              <span class="audience-emoji">🏢</span>
+              <span class="audience-tag">Small Agencies</span>
+              <h3>Give your team shared visibility without enterprise drag.</h3>
+              <p>Support collaborators, custom branding, analytics, and multi-client coordination in one surface.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── TRUST ───────────────────────────────────────────── -->
+      <section class="section" style="padding-top:0;">
+        <div class="container">
+          <div class="section-header centered reveal">
+            <span class="eyebrow">Trust &amp; Compliance</span>
+            <h2>Everything app stores and users<br />need — already in place.</h2>
+          </div>
+          <div class="trust-grid reveal">
+            <article class="trust-card"><span class="trust-icon">🔐</span><h3>Firebase Auth</h3><p>Auth, Firestore, real-time sync, file storage, analytics, and crash reporting — all aligned with the actual mobile build.</p></article>
+            <article class="trust-card"><span class="trust-icon">📄</span><h3>Public Legal Pages</h3><p>Privacy, terms, support, and account deletion pages are live for app-store review and onboarding flows.</p></article>
+            <article class="trust-card"><span class="trust-icon">🗑️</span><h3>In-App Deletion</h3><p>The app includes a delete-account flow under Security &amp; Privacy, publicly documented for compliance and trust.</p></article>
+            <article class="trust-card"><span class="trust-icon">💳</span><h3>Platform Billing</h3><p>Subscription purchases handled entirely through Apple App Store and Google Play — no card data stored in-app.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PRICING ──────────────────────────────────────────── -->
+      <section id="pricing" class="section" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-raised);">
+        <div class="container">
+          <div class="section-header centered reveal">
+            <span class="eyebrow">Pricing</span>
+            <h2>Simple plans, priced for your market.</h2>
+            <p class="sub">Separate pricing for Indian freelancers and global users. No hidden fees — just the plan that fits where you work.</p>
+
+            <!-- ── Region Toggle ── -->
+            <div class="pricing-toggle-wrap" role="group" aria-label="Select your region">
+              <button class="pricing-toggle-btn active" id="toggle-india" aria-pressed="true" data-region="india">
+                🇮🇳 India (₹)
+              </button>
+              <button class="pricing-toggle-btn" id="toggle-global" aria-pressed="false" data-region="global">
+                🌍 Global ($)
+              </button>
+            </div>
+          </div>
+
+          <!-- ─── Pricing grid ──────────────────── -->
+          <div class="pricing-grid reveal">
+
+            <!-- Starter -->
+            <article class="pricing-tier">
+              <p class="tier-name">Starter</p>
+              <div class="tier-price">
+                <span class="price-india">Free</span>
+                <span class="price-global" style="display:none;">Free</span>
+              </div>
+              <p class="tier-desc">Perfect for getting started and testing the workflow.</p>
+              <div class="tier-divider"></div>
+              <div class="tier-features">
+                <div class="tier-feature"><span class="chk">✓</span> 5 active projects</div>
+                <div class="tier-feature"><span class="chk">✓</span> 10 clients</div>
+                <div class="tier-feature"><span class="chk">✓</span> Basic invoicing</div>
+                <div class="tier-feature"><span class="chk">✓</span> Lead pipeline</div>
+                <div class="tier-feature"><span class="na">–</span> Team members</div>
+                <div class="tier-feature"><span class="na">–</span> Analytics dashboard</div>
+                <div class="tier-feature"><span class="na">–</span> Custom branding</div>
+              </div>
+              <div class="tier-cta tier-store-btns">
+                <a class="store-btn store-btn-apple store-btn-sm" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Download DevFlow free on the App Store">
+                  <svg width="15" height="15" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+                  <span class="store-btn-text"><span class="store-btn-sub">Download on</span><span class="store-btn-name">App Store</span></span>
+                </a>
+                <a class="store-btn store-btn-google store-btn-sm" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Download DevFlow free on Google Play">
+                  <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="#00BEFF"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="#FFBD00"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="#FF3A44"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="#15CF74"/></svg>
+                  <span class="store-btn-text"><span class="store-btn-sub">Get it on</span><span class="store-btn-name">Google Play</span></span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Pro (Featured) -->
+            <article class="pricing-tier featured">
+              <div class="tier-badge">Most Popular</div>
+              <p class="tier-name">Pro</p>
+              <div class="tier-price">
+                <span class="price-india"><sub>₹</sub>89<small>/mo</small></span>
+                <span class="price-global" style="display:none;"><sub>$</sub>3<small>/mo</small></span>
+              </div>
+              <p class="tier-savings price-india">Less than ₹3 a day for your whole business</p>
+              <p class="tier-savings price-global" style="display:none;">Just $3 per month for your full workspace</p>
+              <p class="tier-desc">Everything you need to run a full freelance operation.</p>
+              <div class="tier-divider"></div>
+              <div class="tier-features">
+                <div class="tier-feature"><span class="chk">✓</span> Unlimited projects</div>
+                <div class="tier-feature"><span class="chk">✓</span> Unlimited clients</div>
+                <div class="tier-feature"><span class="chk">✓</span> Advanced invoicing &amp; quotes</div>
+                <div class="tier-feature"><span class="chk">✓</span> Up to 3 team members</div>
+                <div class="tier-feature"><span class="chk">✓</span> Analytics dashboard</div>
+                <div class="tier-feature"><span class="chk">✓</span> Time tracking</div>
+                <div class="tier-feature"><span class="na">–</span> Custom branding</div>
+              </div>
+              <div class="tier-cta tier-store-btns">
+                <a class="store-btn store-btn-apple store-btn-sm" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Download and upgrade to Pro on App Store">
+                  <svg width="15" height="15" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+                  <span class="store-btn-text"><span class="store-btn-sub">Download on</span><span class="store-btn-name">App Store</span></span>
+                </a>
+                <a class="store-btn store-btn-google store-btn-sm" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Download and upgrade to Pro on Google Play">
+                  <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="#00BEFF"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="#FFBD00"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="#FF3A44"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="#15CF74"/></svg>
+                  <span class="store-btn-text"><span class="store-btn-sub">Get it on</span><span class="store-btn-name">Google Play</span></span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Agency -->
+            <article class="pricing-tier">
+              <p class="tier-name">Agency</p>
+              <div class="tier-price">
+                <span class="price-india"><sub>₹</sub>249<small>/mo</small></span>
+                <span class="price-global" style="display:none;"><sub>$</sub>10<small>/mo</small></span>
+              </div>
+              <p class="tier-desc">Full-scale ops for growing agencies and studios.</p>
+              <div class="tier-divider"></div>
+              <div class="tier-features">
+                <div class="tier-feature"><span class="chk">✓</span> Everything in Pro</div>
+                <div class="tier-feature"><span class="chk">✓</span> Unlimited team members</div>
+                <div class="tier-feature"><span class="chk">✓</span> Custom branding &amp; white-label</div>
+                <div class="tier-feature"><span class="chk">✓</span> Advanced analytics</div>
+                <div class="tier-feature"><span class="chk">✓</span> Priority support</div>
+                <div class="tier-feature"><span class="chk">✓</span> Early feature access</div>
+                <div class="tier-feature"><span class="chk">✓</span> Dedicated onboarding</div>
+              </div>
+              <div class="tier-cta tier-store-btns">
+                <a class="store-btn store-btn-apple store-btn-sm" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Get Agency plan on App Store">
+                  <svg width="15" height="15" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+                  <span class="store-btn-text"><span class="store-btn-sub">Download on</span><span class="store-btn-name">App Store</span></span>
+                </a>
+                <a class="store-btn store-btn-google store-btn-sm" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Get Agency plan on Google Play">
+                  <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="#00BEFF"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="#FFBD00"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="#FF3A44"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="#15CF74"/></svg>
+                  <span class="store-btn-text"><span class="store-btn-sub">Get it on</span><span class="store-btn-name">Google Play</span></span>
+                </a>
+              </div>
+            </article>
+
+          </div><!-- /pricing-grid -->
+
+          <!-- Bottom note -->
+          <p class="pricing-footnote">Prices shown are indicative. Final in-app pricing is set by Apple App Store and Google Play and may include applicable taxes based on your location.</p>
+        </div>
+      </section>
+
+      <!-- ── FAQ ──────────────────────────────────────────────── -->
+      <section id="faq" class="section">
+        <div class="container" style="max-width:700px;">
+          <div class="section-header centered reveal">
+            <span class="eyebrow">FAQ</span>
+            <h2>Questions before you download.</h2>
+          </div>
+          <div class="faq-list reveal">
+            <details class="faq-item"><summary class="faq-summary">What does DevFlow actually do?</summary><div class="faq-body"><p>DevFlow is a mobile workspace for freelancers and small agencies to manage their entire client operation: leads, projects, clients, files, quotations, invoices, analytics, branding, subscriptions, and team activity — in one connected system built for phones.</p></div></details>
+            <details class="faq-item"><summary class="faq-summary">Does DevFlow handle payment card data directly?</summary><div class="faq-body"><p>No. Subscriptions are handled entirely through Apple App Store and Google Play purchase frameworks. No card data is stored in the app or on our servers.</p></div></details>
+            <details class="faq-item"><summary class="faq-summary">How is account deletion handled?</summary><div class="faq-body"><p>The app includes a full in-app delete-account flow under Security &amp; Privacy. We also have a dedicated <a href="./account-deletion.html" style="color:var(--accent-hi);">Account Deletion</a> page so users can understand their options before downloading.</p></div></details>
+            <details class="faq-item"><summary class="faq-summary">Who is DevFlow built for?</summary><div class="faq-body"><p>Solo developers, freelancers, consultants, and small agencies who need one place to run delivery and billing operations from a mobile-first surface.</p></div></details>
+            <details class="faq-item"><summary class="faq-summary">What languages does DevFlow support?</summary><div class="faq-body"><p>DevFlow currently supports English, Spanish, French, German, and Portuguese — with more locales coming as the app expands globally.</p></div></details>
+            <details class="faq-item"><summary class="faq-summary">How does team collaboration work?</summary><div class="faq-body"><p>Pro plans support up to 3 team members with shared project visibility. Agency plans unlock unlimited collaborators with advanced team coordination.</p></div></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CTA ──────────────────────────────────────────────── -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-box reveal">
+            <div class="cta-box-inner">
+              <span class="eyebrow">Download DevFlow</span>
+              <h2>Give your freelance business the operating system it deserves.</h2>
+              <p>Run your entire client business from one fast, intuitive mobile app — manage leads, projects, invoices, and analytics from your pocket.</p>
+              <div class="cta-actions">
+                <a class="store-btn store-btn-apple store-btn-lg" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Download DevFlow on the App Store">
+              <svg width="24" height="24" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Download on the</span>
+                <span class="store-btn-name">App Store</span>
+              </span>
+            </a>
+                <a class="store-btn store-btn-google store-btn-lg" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Get DevFlow on Google Play">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gp-a" x1="61.29%" x2="26.78%" y1="5.08%" y2="71.41%"><stop offset="0" stop-color="#00A0FF"/><stop offset=".007" stop-color="#00A1FF"/><stop offset=".26" stop-color="#00BEFF"/><stop offset=".512" stop-color="#00D2FF"/><stop offset=".76" stop-color="#00DFFF"/><stop offset="1" stop-color="#00E3FF"/></linearGradient><linearGradient id="gp-b" x1="107.68%" x2="-13.94%" y1="49.98%" y2="49.98%"><stop offset="0" stop-color="#FFE000"/><stop offset=".409" stop-color="#FFBD00"/><stop offset=".775" stop-color="orange"/><stop offset="1" stop-color="#FF9C00"/></linearGradient><linearGradient id="gp-c" x1="125.56%" x2="-37.66%" y1="30.9%" y2="136.01%"><stop offset="0" stop-color="#FF3A44"/><stop offset="1" stop-color="#C31162"/></linearGradient><linearGradient id="gp-d" x1="-18.81%" x2="42.15%" y1="-11.47%" y2="35.75%"><stop offset="0" stop-color="#32A071"/><stop offset=".069" stop-color="#2DA771"/><stop offset=".476" stop-color="#15CF74"/><stop offset=".801" stop-color="#06E775"/><stop offset="1" stop-color="#00F076"/></linearGradient></defs><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="url(#gp-a)"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="url(#gp-b)"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="url(#gp-c)"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="url(#gp-d)"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Get it on</span>
+                <span class="store-btn-name">Google Play</span>
+              </span>
+            </a>
+              </div>
+              <p class="cta-note">Free to download &middot; iOS &amp; Android &middot; No credit card required</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div>
-        <a class="brand footer-brand" href="./index.html">
-          <img src="./assets/app-icon.png" alt="DevFlow app icon" />
-          <span>DevFlow</span>
-        </a>
-        <p>
-          A mobile operating system for developers, freelancers, and small
-          agencies.
-        </p>
+    <!-- ── PRE-FOOTER DOWNLOAD STRIP ────────────────────────── -->
+    <div class="footer-dl-strip">
+      <div class="footer-dl-strip-inner">
+        <h2>Your whole business.<br>One pocket-sized app.</h2>
+        <p>Download DevFlow free. No credit card required — start managing leads, projects, and invoices from day one.</p>
+        <div class="footer-dl-strip-btns">
+          <a class="store-btn store-btn-apple store-btn-lg" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Download DevFlow on the App Store">
+            <svg width="24" height="24" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+            <span class="store-btn-text">
+              <span class="store-btn-sub">Download on the</span>
+              <span class="store-btn-name">App Store</span>
+            </span>
+          </a>
+          <a class="store-btn store-btn-google store-btn-lg" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Get DevFlow on Google Play">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fp-a" x1="61.29%" x2="26.78%" y1="5.08%" y2="71.41%"><stop offset="0" stop-color="#00A0FF"/><stop offset="1" stop-color="#00E3FF"/></linearGradient><linearGradient id="fp-b" x1="107.68%" x2="-13.94%" y1="49.98%" y2="49.98%"><stop offset="0" stop-color="#FFE000"/><stop offset="1" stop-color="#FF9C00"/></linearGradient><linearGradient id="fp-c" x1="125.56%" x2="-37.66%" y1="30.9%" y2="136.01%"><stop offset="0" stop-color="#FF3A44"/><stop offset="1" stop-color="#C31162"/></linearGradient><linearGradient id="fp-d" x1="-18.81%" x2="42.15%" y1="-11.47%" y2="35.75%"><stop offset="0" stop-color="#32A071"/><stop offset="1" stop-color="#00F076"/></linearGradient></defs><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="url(#fp-a)"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="url(#fp-b)"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="url(#fp-c)"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="url(#fp-d)"/></svg>
+            <span class="store-btn-text">
+              <span class="store-btn-sub">Get it on</span>
+              <span class="store-btn-name">Google Play</span>
+            </span>
+          </a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="./privacy.html">Privacy Policy</a>
-        <a href="./terms.html">Terms of Service</a>
-        <a href="./support.html">Support</a>
-        <a href="./account-deletion.html">Account Deletion</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="footer-top">
+        <!-- Brand col -->
+        <div class="footer-brand-col">
+          <a class="brand" href="./index.html" aria-label="DevFlow home">
+            <img src="./assets/app-icon.png" alt="" width="22" height="22" decoding="async" aria-hidden="true" />
+            DevFlow
+          </a>
+          <p class="footer-brand-desc">The mobile operating system for freelancers, consultants, and small agencies.</p>
+          <!-- Social links -->
+          <div class="footer-socials" aria-label="Social links">
+            <a class="social-link" href="mailto:info@thekada.in" aria-label="Email DevFlow support">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3zm1 0v.511l6 3.6 6-3.6V3H2zm13 1.711-5.4 3.24a1 1 0 0 1-1.2 0L3 4.711V13h12V4.711z"/></svg>
+            </a>
+            <a class="social-link" href="https://twitter.com" aria-label="DevFlow on Twitter" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg>
+            </a>
+            <a class="social-link" href="https://linkedin.com" aria-label="DevFlow on LinkedIn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+            </a>
+            <a class="social-link" href="https://github.com" aria-label="DevFlow on GitHub" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            </a>
+          </div>
+          <!-- App store download badges -->
+          <div class="app-badges" style="flex-direction:column;gap:.5rem;">
+            <a class="store-btn store-btn-apple store-btn-sm" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Download on the App Store">
+              <svg width="16" height="16" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Download on</span>
+                <span class="store-btn-name">App Store</span>
+              </span>
+            </a>
+            <a class="store-btn store-btn-google store-btn-sm" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gp-a" x1="61.29%" x2="26.78%" y1="5.08%" y2="71.41%"><stop offset="0" stop-color="#00A0FF"/><stop offset=".007" stop-color="#00A1FF"/><stop offset=".26" stop-color="#00BEFF"/><stop offset=".512" stop-color="#00D2FF"/><stop offset=".76" stop-color="#00DFFF"/><stop offset="1" stop-color="#00E3FF"/></linearGradient><linearGradient id="gp-b" x1="107.68%" x2="-13.94%" y1="49.98%" y2="49.98%"><stop offset="0" stop-color="#FFE000"/><stop offset=".409" stop-color="#FFBD00"/><stop offset=".775" stop-color="orange"/><stop offset="1" stop-color="#FF9C00"/></linearGradient><linearGradient id="gp-c" x1="125.56%" x2="-37.66%" y1="30.9%" y2="136.01%"><stop offset="0" stop-color="#FF3A44"/><stop offset="1" stop-color="#C31162"/></linearGradient><linearGradient id="gp-d" x1="-18.81%" x2="42.15%" y1="-11.47%" y2="35.75%"><stop offset="0" stop-color="#32A071"/><stop offset=".069" stop-color="#2DA771"/><stop offset=".476" stop-color="#15CF74"/><stop offset=".801" stop-color="#06E775"/><stop offset="1" stop-color="#00F076"/></linearGradient></defs><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="url(#gp-a)"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="url(#gp-b)"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="url(#gp-c)"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="url(#gp-d)"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Get it on</span>
+                <span class="store-btn-name">Google Play</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Product col -->
+        <div class="footer-col">
+          <p class="footer-col-title">Product</p>
+          <a href="./index.html#features">Features</a>
+          <a href="./index.html#workflow">Workflow</a>
+          <a href="./index.html#pricing">Pricing</a>
+          <a href="./index.html#faq">FAQ</a>
+          <a href="./support.html">Support</a>
+        </div>
+
+        <!-- Platform col -->
+        <div class="footer-col">
+          <p class="footer-col-title">Platform</p>
+          <a href="./support.html#signin">iOS App</a>
+          <a href="./support.html#signin">Android App</a>
+          <a href="./support.html#billing-help">Subscriptions</a>
+          <a href="./support.html#data">Data Export</a>
+        </div>
+
+        <!-- Legal col -->
+        <div class="footer-col">
+          <p class="footer-col-title">Legal</p>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Service</a>
+          <a href="./account-deletion.html">Account Deletion</a>
+        </div>
+
+        <!-- Support col -->
+        <div class="footer-col">
+          <p class="footer-col-title">Download</p>
+          <a href="https://apps.apple.com" target="_blank" rel="noopener">iOS — App Store</a>
+          <a href="https://play.google.com" target="_blank" rel="noopener">Android — Google Play</a>
+          <a href="./support.html">Help Center</a>
+          <a href="./support.html#contact">Contact Us</a>
+          <a href="mailto:info@thekada.in">info@thekada.in</a>
+        </div>
       </div>
-      <p class="footer-meta">
-        <span id="year"></span> DevFlow. Built for launch, review, and early
-        customer trust.
-      </p>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Thekada Digital Ventures Pvt Ltd.</span>
+        <div class="footer-bottom-links">
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./account-deletion.html">Deletion</a>
+          <a href="./support.html">Support</a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
