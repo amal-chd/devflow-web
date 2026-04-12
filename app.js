@@ -247,3 +247,15 @@ document.querySelectorAll('.sidebar-item').forEach((item) => {
   btnIndia.addEventListener('click',  () => setRegion('india'));
   btnGlobal.addEventListener('click', () => setRegion('global'));
 })();
+
+/* ── Dynamic OS detection for Store Buttons ────────────────────── */
+(() => {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const isAndroid = /android/i.test(navigator.userAgent);
+  
+  if (isIOS) {
+    document.documentElement.classList.add('os-ios');
+  } else if (isAndroid) {
+    document.documentElement.classList.add('os-android');
+  }
+})();
