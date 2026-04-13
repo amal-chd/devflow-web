@@ -259,3 +259,44 @@ document.querySelectorAll('.sidebar-item').forEach((item) => {
     document.documentElement.classList.add('os-android');
   }
 })();
+
+/* ── Newsletter form ────────────────────────────────────────────── */
+(() => {
+  const form      = document.querySelector('#newsletter-form');
+  const emailInput= document.querySelector('#nl-email');
+  const submitBtn = document.querySelector('#nl-submit-btn');
+  const successEl = document.querySelector('#nl-success');
+  const hintEl    = document.querySelector('#nl-hint');
+  if (!form || !emailInput || !submitBtn) return;
+
+  const isValidEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Validate
+    if (!isValidEmail(emailInput.value)) {
+      emailInput.classList.add('error');
+      emailInput.focus();
+      return;
+    }
+    emailInput.classList.remove('error');
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.querySelector('.nl-submit-text').textContent = 'Subscribing…';
+
+    // Simulate async subscription (replace with real endpoint)
+    await new Promise((r) => setTimeout(r, 1000));
+
+    // Show success
+    form.querySelector('.nl-input-row').style.display  = 'none';
+    if (hintEl) hintEl.style.display = 'none';
+    if (successEl) {
+      successEl.removeAttribute('hidden');
+    }
+  });
+
+  // Clear error on input
+  emailInput.addEventListener('input', () => emailInput.classList.remove('error'));
+})();
