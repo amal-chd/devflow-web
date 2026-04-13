@@ -42,9 +42,14 @@
         z-index: 1;
         max-width: var(--max-w);
         margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
       .legal-hero-inner h1 { font-size: clamp(2.6rem, 5vw, 4.5rem); margin-bottom: 1rem; }
-      .legal-meta { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 1.25rem; font-size: .83rem; color: var(--ink-faint); }
+      .legal-meta { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 1.25rem; font-size: .83rem; color: var(--ink-faint);   justify-content: center;
+      }
 
       /* layout */
       .legal-layout {
@@ -356,7 +361,7 @@
         <div class="legal-hero-inner">
           <span class="eyebrow" style="color:rgba(239,68,68,0.8);">Data Rights</span>
           <h1>Account Deletion</h1>
-          <p style="max-width:52ch;font-size:1.05rem;color:var(--ink-muted);">
+          <p style="max-width:52ch;font-size:1.05rem;color:var(--ink-muted);; margin-inline: auto; text-align: center;">
             Clear instructions for deleting your DevFlow account and requesting data removal.
             This page is public so users always know exactly where to go.
           </p>

@@ -42,9 +42,14 @@
         z-index: 1;
         max-width: var(--max-w);
         margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
       .legal-hero-inner h1 { font-size: clamp(2.6rem, 5vw, 4.5rem); margin-bottom: 1rem; }
-      .legal-meta { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 1.25rem; font-size: .83rem; color: var(--ink-faint); }
+      .legal-meta { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 1.25rem; font-size: .83rem; color: var(--ink-faint);   justify-content: center;
+      }
 
       .legal-layout {
         display: grid;
@@ -308,7 +313,7 @@
         <div class="legal-hero-inner">
           <span class="eyebrow">Legal</span>
           <h1>Terms of Service</h1>
-          <p style="max-width:52ch;font-size:1.05rem;color:var(--ink-muted);">
+          <p style="max-width:52ch;font-size:1.05rem;color:var(--ink-muted);; margin-inline: auto; text-align: center;">
             These terms govern access to the DevFlow mobile application, website, and related services.
             By using DevFlow, you agree to these terms.
           </p>

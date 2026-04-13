@@ -45,6 +45,10 @@
         z-index: 1;
         max-width: var(--max-w);
         margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
       .legal-hero-inner h1 {
         font-size: clamp(2.6rem, 5vw, 4.5rem);
@@ -57,6 +61,7 @@
         margin-top: 1.25rem;
         font-size: 0.83rem;
         color: var(--ink-faint);
+        justify-content: center;
       }
       .legal-meta span { display: flex; align-items: center; gap: 0.4rem; }
 
@@ -416,7 +421,7 @@
         <div class="legal-hero-inner">
           <span class="eyebrow">Legal</span>
           <h1>Privacy Policy</h1>
-          <p style="max-width:52ch;font-size:1.05rem;color:var(--ink-muted);">
+          <p style="max-width:52ch;font-size:1.05rem;color:var(--ink-muted);; margin-inline: auto; text-align: center;">
             This policy explains how DevFlow handles personal data when people use the mobile app,
             public pages, and support channels. We keep it clear — no legalese fog.
           </p>
