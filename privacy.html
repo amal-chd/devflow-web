@@ -212,13 +212,17 @@
     <!-- ── HEADER ────────────────────────────────────────────── -->
     <header class="site-header" id="site-header">
       <div class="header-inner">
+
+        <!-- Brand -->
         <a class="brand" href="./index.html" aria-label="DevFlow home">
           <img src="./assets/app-icon.png" alt="" width="26" height="26" decoding="async" aria-hidden="true" />
           DevFlow
         </a>
 
+        <!-- Primary nav -->
         <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-          <!-- Features dropdown -->
+
+          <!-- Features (dropdown) -->
           <div class="nav-item">
             <span class="nav-link" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
               Features
@@ -226,33 +230,76 @@
                 <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <div class="nav-dropdown" role="menu">
-              <a class="dropdown-link" href="./index.html#features" role="menuitem">
-                <span class="dropdown-icon">🎯</span>
-                <span class="dropdown-text"><strong>Lead Pipeline</strong><span>Capture, track, and convert leads</span></span>
-              </a>
-              <a class="dropdown-link" href="./index.html#features" role="menuitem">
-                <span class="dropdown-icon">📋</span>
-                <span class="dropdown-text"><strong>Project Management</strong><span>Track work from start to delivery</span></span>
-              </a>
-              <a class="dropdown-link" href="./index.html#features" role="menuitem">
-                <span class="dropdown-icon">💳</span>
-                <span class="dropdown-text"><strong>Invoicing &amp; Quotes</strong><span>Estimate, invoice, and get paid</span></span>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-link" href="./index.html#features" role="menuitem">
-                <span class="dropdown-icon">📊</span>
-                <span class="dropdown-text"><strong>Analytics</strong><span>Revenue, conversion, and pipeline</span></span>
-              </a>
-              <a class="dropdown-link" href="./index.html#features" role="menuitem">
-                <span class="dropdown-icon">👥</span>
-                <span class="dropdown-text"><strong>Team Collaboration</strong><span>Shared visibility for agencies</span></span>
-              </a>
+                        <div class="nav-dropdown mega-menu" role="menu">
+              <div class="mega-dropdown-col">
+                <span class="mega-dropdown-title">CRM &amp; Sales</span>
+                <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                  <span class="dropdown-icon">🎯</span>
+                  <span class="dropdown-text">
+                    <strong>Lead Pipeline</strong>
+                    <span>Capture, track, convert leads</span>
+                  </span>
+                </a>
+                <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                  <span class="dropdown-icon">💳</span>
+                  <span class="dropdown-text">
+                    <strong>Invoicing &amp; Quotes</strong>
+                    <span>Estimate, invoice, get paid</span>
+                  </span>
+                </a>
+                <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                  <span class="dropdown-icon">📊</span>
+                  <span class="dropdown-text">
+                    <strong>Analytics</strong>
+                    <span>Revenue, conversion, pipeline</span>
+                  </span>
+                </a>
+              </div>
+              <div class="mega-dropdown-col">
+                <span class="mega-dropdown-title">Operations &amp; Delivery</span>
+                <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                  <span class="dropdown-icon">📋</span>
+                  <span class="dropdown-text">
+                    <strong>Project Management</strong>
+                    <span>Track work to delivery</span>
+                  </span>
+                </a>
+                <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                  <span class="dropdown-icon">👥</span>
+                  <span class="dropdown-text">
+                    <strong>Team Collaboration</strong>
+                    <span>Shared visibility for agencies</span>
+                  </span>
+                </a>
+                <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                  <span class="dropdown-icon">⏱️</span>
+                  <span class="dropdown-text">
+                    <strong>Time Tracking</strong>
+                    <span>Log hours, build timesheets</span>
+                  </span>
+                </a>
+                <a class="dropdown-link" href="./index.html#features" role="menuitem">
+                  <span class="dropdown-icon">📁</span>
+                  <span class="dropdown-text">
+                    <strong>File Storage</strong>
+                    <span>Contracts &amp; assets linked</span>
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
-            <div class="nav-item"><a class="nav-link" href="./index.html#workflow">Workflow</a></div>
-            <div class="nav-item"><a class="nav-link" href="./index.html#pricing">Pricing</a></div>
-          <!-- Legal dropdown -->
+
+          <!-- Workflow -->
+          <div class="nav-item">
+            <a class="nav-link" href="./index.html#workflow">Workflow</a>
+          </div>
+
+          <!-- Pricing -->
+          <div class="nav-item">
+            <a class="nav-link" href="./index.html#pricing">Pricing</a>
+          </div>
+
+          <!-- Legal (dropdown) -->
           <div class="nav-item">
             <span class="nav-link" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
               Legal
@@ -263,24 +310,38 @@
             <div class="nav-dropdown" role="menu">
               <a class="dropdown-link" href="./privacy.html" role="menuitem">
                 <span class="dropdown-icon">🔐</span>
-                <span class="dropdown-text"><strong>Privacy Policy</strong><span>How we handle your data</span></span>
+                <span class="dropdown-text">
+                  <strong>Privacy Policy</strong>
+                  <span>How we handle your data</span>
+                </span>
               </a>
               <a class="dropdown-link" href="./terms.html" role="menuitem">
                 <span class="dropdown-icon">📄</span>
-                <span class="dropdown-text"><strong>Terms of Service</strong><span>Rules governing access</span></span>
+                <span class="dropdown-text">
+                  <strong>Terms of Service</strong>
+                  <span>Rules governing access</span>
+                </span>
               </a>
               <a class="dropdown-link" href="./account-deletion.html" role="menuitem">
                 <span class="dropdown-icon">🗑️</span>
-                <span class="dropdown-text"><strong>Account Deletion</strong><span>Delete your data anytime</span></span>
+                <span class="dropdown-text">
+                  <strong>Account Deletion</strong>
+                  <span>Delete your data anytime</span>
+                </span>
               </a>
             </div>
           </div>
-            <div class="nav-item"><a class="nav-link" href="./support.html">Support</a></div>
+
+          <!-- Support -->
+          <div class="nav-item">
+            <a class="nav-link" href="./support.html">Support</a>
+          </div>
+
         </nav>
 
+        <!-- Download CTAs -->
         <div class="header-actions">
-          <a class="btn btn-ghost btn-sm" href="./support.html">Log in</a>
-          <a class="btn btn-primary btn-sm" href="./index.html#download">Get started free</a>
+          <!-- Mobile hamburger -->
           <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
               <path d="M2 3.5h11M2 7.5h11M2 11.5h11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
@@ -293,7 +354,6 @@
     <!-- ── MOBILE NAV ─────────────────────────────────────────── -->
     <div class="mobile-nav-overlay" id="mobile-nav" aria-label="Mobile navigation">
       <div class="mobile-nav-links">
-        <a href="./index.html">Home</a>
         
         <details class="mobile-nav-details">
           <summary class="mobile-nav-summary">
@@ -331,8 +391,22 @@
         <a href="./support.html">Support</a>
       </div>
       <div class="mobile-nav-actions">
-        <a class="btn btn-ghost" href="./support.html">Log in</a>
-        <a class="btn btn-primary" href="./index.html#download">Get started free &rarr;</a>
+        <!-- OS-aware smart download CTA -->
+        <a class="store-btn store-btn-apple store-btn-mobile-cta" href="https://apps.apple.com" target="_blank" rel="noopener" aria-label="Download DevFlow on the App Store">
+          <svg width="20" height="20" viewBox="0 0 384 512" fill="#ffffff" aria-hidden="true"><path d="M318.7 268.7c-.2-36.3 16.4-64.1 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-43.1-159c19.1-23.2 30-54.7 26.5-86.2-26.6 1.1-58.4 17.7-77.5 40-18.4 21.3-31.4 53.5-27.4 83.9 29.3 2.2 59.3-14.5 78.4-37.7z"/></svg>
+          <span class="store-btn-text">
+            <span class="store-btn-sub">Download on the</span>
+            <span class="store-btn-name">App Store</span>
+          </span>
+        </a>
+        <a class="store-btn store-btn-google store-btn-mobile-cta" href="https://play.google.com/store/apps" target="_blank" rel="noopener" aria-label="Get DevFlow on Google Play">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="mn-gp-a" x1="61.29%" x2="26.78%" y1="5.08%" y2="71.41%"><stop offset="0" stop-color="#00A0FF"/><stop offset="1" stop-color="#00E3FF"/></linearGradient><linearGradient id="mn-gp-b" x1="107.68%" x2="-13.94%" y1="49.98%" y2="49.98%"><stop offset="0" stop-color="#FFE000"/><stop offset="1" stop-color="#FF9C00"/></linearGradient><linearGradient id="mn-gp-c" x1="125.56%" x2="-37.66%" y1="30.9%" y2="136.01%"><stop offset="0" stop-color="#FF3A44"/><stop offset="1" stop-color="#C31162"/></linearGradient><linearGradient id="mn-gp-d" x1="-18.81%" x2="42.15%" y1="-11.47%" y2="35.75%"><stop offset="0" stop-color="#32A071"/><stop offset="1" stop-color="#00F076"/></linearGradient></defs><path d="M1.22.29A1.52 1.52 0 0 0 .75 1.4v21.2c0 .43.17.81.47 1.08l.06.06L12.2 12.8v-.28L1.28.24z" fill="url(#mn-gp-a)"/><path d="M16.05 16.66l-3.85-3.86v-.28l3.85-3.85.09.05 4.56 2.59c1.3.74 1.3 1.95 0 2.69l-4.56 2.59z" fill="url(#mn-gp-b)"/><path d="M16.14 16.61L12.2 12.66 1.22 23.74c.43.46 1.13.51 1.92.06l12.98-7.19" fill="url(#mn-gp-c)"/><path d="M16.14 7.39L3.14.2C2.35-.25 1.65-.2 1.22.26l10.98 11z" fill="url(#mn-gp-d)"/></svg>
+          <span class="store-btn-text">
+            <span class="store-btn-sub">Get it on</span>
+            <span class="store-btn-name">Google Play</span>
+          </span>
+        </a>
+        <a class="btn btn-ghost mobile-nav-pricing-link" href="./index.html#pricing">View Pricing →</a>
       </div>
     </div>
 
