@@ -1925,15 +1925,34 @@ details[open] .faq-summary::after { content: '−'; color: var(--accent-hi); }
   /* Trust: 2 col */
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
 
-  /* Pricing: 1 col centred */
+  /* Pricing: Horizontal sliding carousel */
+  #pricing {
+    overflow-x: clip; /* prevent bleed issues on parent */
+  }
   .pricing-grid {
-    grid-template-columns: 1fr;
-    max-width: 380px;
-    margin-inline: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: clamp(1rem, 4vw, 2rem);
+    gap: 1rem;
+    padding-bottom: 2.5rem; /* give extra space below for touch sliding */
+    margin-inline: calc(-1 * clamp(1rem, 4vw, 2rem));
+    padding-inline: clamp(1rem, 4vw, 2rem);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    max-width: none;
+  }
+  .pricing-grid::-webkit-scrollbar { display: none; }
+  
+  .pricing-grid > article {
+    flex: 0 0 85%;
+    max-width: 340px;
+    scroll-snap-align: center;
   }
   .pricing-grid > article:last-child {
     grid-column: auto;
-    max-width: none;
+    max-width: 340px;
   }
 
   /* Footer strip buttons */
