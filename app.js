@@ -300,3 +300,44 @@ document.querySelectorAll('.sidebar-item').forEach((item) => {
   // Clear error on input
   emailInput.addEventListener('input', () => emailInput.classList.remove('error'));
 })();
+
+/* ── Smooth Scroll Interceptor ─────────────────────────────────────── */
+/**
+ * Ensures very smooth scrolling to anchor links across all browsers,
+ * overriding any jumpy native anchor behaviors, while respecting
+ * the fixed header height.
+ */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    // Only intercept if we are staying on the same page
+    if (this.pathname === window.location.pathname || !this.pathname) {
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        
+        // Calculate offset including the fixed header + some padding
+        const getHeaderHeight = () => {
+          const h = document.documentElement.style.getPropertyValue('--header-h') || '60px';
+          return parseInt(h, 10);
+        };
+        const offset = getHeaderHeight() + 24; 
+        
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Optional: Update URL hash without jumping
+        if (history.pushState) {
+          history.pushState(null, null, targetId);
+        }
+      }
+    }
+  });
+});

@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="format-detection" content="telephone=no" />
     <title>Support — DevFlow Help Center</title>
-    <meta name="description" content="Get help with DevFlow. Contact support, request beta access, manage your account, and find answers to common questions." />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta name="description" content="Get help with DevFlow. Contact support, download the app, manage your account, and find answers to common questions." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="./assets/app-icon.png" />
@@ -159,24 +159,7 @@
       }
       .support-card-link:hover { gap: 0.5rem; }
 
-      /* ── Beta section ─────────────────────────────────── */
-      .beta-section {
-        background: var(--bg-raised);
-        border: 1px solid var(--border);
-        border-radius: var(--radius-xl);
-        padding: 2.5rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        align-items: center;
-        margin-bottom: 3rem;
-      }
-      .beta-body h2 { font-size: 1.6rem; margin-bottom: 0.75rem; }
-      .beta-steps { display: grid; gap: 1rem; }
-      .beta-step { display: flex; gap: 0.85rem; align-items: flex-start; }
-      .step-badge { flex-shrink: 0; width: 28px; height: 28px; border-radius: var(--radius-sm); background: var(--accent-soft); border: 1px solid rgba(99,102,241,0.2); display: grid; place-items: center; font-size: 0.72rem; font-weight: 700; color: var(--accent-hi); margin-top: 0.1rem; }
-      .step-text h4 { font-size: 0.9rem; color: var(--ink); margin-bottom: 0.2rem; }
-      .step-text p { font-size: 0.83rem; }
+
 
       /* ── Status panel ─────────────────────────────────── */
       .status-panel {
@@ -199,7 +182,7 @@
         .support-grid { grid-template-columns: 1fr 1fr; }
         .contact-card { grid-template-columns: 1fr; }
         .contact-actions { flex-direction: row; flex-wrap: wrap; }
-        .beta-section { grid-template-columns: 1fr; }
+
       }
       @media (max-width: 580px) {
         .support-grid { grid-template-columns: 1fr; }
@@ -212,8 +195,8 @@
     <!-- ── ANNOUNCEMENT BAR ──────────────────────────────────── -->
     <div class="announce-bar" id="announce-bar" role="banner" aria-label="Announcement">
       <span class="announce-badge">New</span>
-      <span>DevFlow Beta is now open — &thinsp;</span>
-      <a href="./support.html#beta">Request early access &rarr;</a>
+      <span>DevFlow is now available on all devices — &thinsp;</span>
+      <a href="./index.html#download">Download Now &rarr;</a>
       <button class="announce-close" id="announce-close" aria-label="Dismiss announcement">&#x2715;</button>
     </div>
 
@@ -288,7 +271,7 @@
 
         <div class="header-actions">
           <a class="btn btn-ghost btn-sm" href="./support.html">Log in</a>
-          <a class="btn btn-primary btn-sm" href="./support.html#beta">Get started free</a>
+          <a class="btn btn-primary btn-sm" href="./index.html#download">Get started free</a>
           <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
               <path d="M2 3.5h11M2 7.5h11M2 11.5h11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
@@ -312,7 +295,7 @@
       </div>
       <div class="mobile-nav-actions">
         <a class="btn btn-ghost" href="./support.html">Log in</a>
-        <a class="btn btn-primary" href="./support.html#beta">Get started free &rarr;</a>
+        <a class="btn btn-primary" href="./index.html#download">Get started free &rarr;</a>
       </div>
     </div>
 
@@ -323,7 +306,7 @@
           <span class="eyebrow">Help Center</span>
           <h1>How can we help?</h1>
           <p style="font-size:1.05rem;color:var(--ink-muted);">
-            Support for DevFlow users, beta testers, app-store reviewers, and anyone
+            Support for DevFlow users, freelancers, agencies, and anyone
             with questions about the product, account, data, or billing.
           </p>
           <div class="support-search" role="search">
@@ -364,48 +347,11 @@
               Send Email
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M2 6.5h9M8 3l3 3.5-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a class="btn btn-outline" href="mailto:info@thekada.in?subject=DevFlow%20Beta%20Access" style="font-size:.88rem;">Request Beta</a>
+
           </div>
         </div>
 
-        <!-- Beta section -->
-        <div class="beta-section reveal" id="beta">
-          <div class="beta-body">
-            <span class="eyebrow">Early Access</span>
-            <h2>Request Beta Access</h2>
-            <p style="font-size:.93rem;margin-bottom:1.5rem;">
-              DevFlow is currently in beta on iOS and Android. If you'd like to test the app before public launch,
-              send us an email and we'll onboard you as quickly as we can.
-            </p>
-            <a class="btn btn-primary btn-lg" href="mailto:info@thekada.in?subject=DevFlow%20Beta%20Access">
-              Email for Beta Access
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-          <div class="beta-steps">
-            <div class="beta-step">
-              <span class="step-badge">01</span>
-              <div class="step-text">
-                <h4>Email us</h4>
-                <p>Send an email to info@thekada.in with subject: "DevFlow Beta Access".</p>
-              </div>
-            </div>
-            <div class="beta-step">
-              <span class="step-badge">02</span>
-              <div class="step-text">
-                <h4>Get onboarded</h4>
-                <p>We'll send you TestFlight (iOS) or Google Play testing (Android) instructions within 48 hours.</p>
-              </div>
-            </div>
-            <div class="beta-step">
-              <span class="step-badge">03</span>
-              <div class="step-text">
-                <h4>Share feedback</h4>
-                <p>Use the app, report bugs, and help us shape the product before public launch.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
         <!-- Support topics -->
         <div class="section-header reveal" style="margin-bottom:1.5rem;">
